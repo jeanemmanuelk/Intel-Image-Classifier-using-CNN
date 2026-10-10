@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements an image classifier using a Convolutional Neural Network (CNN) to classify images into six categories: mountain, street, glacier, buildings, sea, and forest. The dataset contains approximately 25,000 images of size 150x150 distributed across the six categories. The goal of this project is to build a CNN model that can accurately classify images into their respective categories.
+This project implements an image classifier using a Convolutional Neural Network (CNN) to classify images into six categories: mountain, street, glacier, buildings, sea, and forest. The full challenge dataset has about 25,000 images across the six categories. This notebook uses the 17,034 labeled images (14,034 for training, plus 3,000 split evenly into 1,500 validation and 1,500 test), resized to 150x150. The goal of this project is to build a CNN model that can accurately classify images into their respective categories.
 
 ## Data
 
@@ -26,7 +26,7 @@ The dataset used for this project was initially published on https://datahack.an
 
 ## Results
 
-The trained CNN model achieves a validation accuracy of approximately 80%. The model's performance can be further assessed using the confusion matrix and sample image predictions.
+The trained CNN reaches a validation accuracy of about 80% (0.80 after 20 epochs), while its training accuracy climbs to about 97%. That gap, and a validation loss that bottoms out around epoch 4 (about 0.56) and climbs to about 1.2 by epoch 20, mean the model overfits. Adding data augmentation, early stopping, or a pretrained backbone are the obvious next things to try. The notebook also computes accuracy, precision, recall and F1 on the test set, but does not print them. Only a confusion matrix plot and a few sample predictions are shown.
 
 ## Conclusion
 
